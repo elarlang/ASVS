@@ -45,14 +45,14 @@ note: tags and numbers for requirements are not changed, at the moment the goal 
 | **4.2.3** | [ADDED] Verify that messages received by the postMessage interface are discarded if the origin of the message is not trusted, or if the syntax of the message is invalid. | | ✓ | ✓ | 346 | [#1230](https://github.com/OWASP/ASVS/issues/1230) |
 | **14.5.3** | [MODIFIED, SPLIT TO 14.4.8] Verify that the Origin header is validated against a defined list of allowed origins to match the desired Cross-Origin Resource Sharing (CORS) policy. | ✓ | ✓ | ✓ | 346 | [#1230](https://github.com/OWASP/ASVS/issues/1230) |
 
-## V50.3 XSSI
+## V50.4 XSSI
 
 | # | Description | L1 | L2 | L3 | CWE | Issue |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
 | **50.3.1** | [ADDED] Verify that JSONP functionality is not enabled anywhere across the application to avoid Cross-Site Script Inclusion (XSSI) attacks. | | ✓ | ✓ | | [#903](https://github.com/OWASP/ASVS/issues/903) |
 | **50.3.2** | [ADDED] Verify that sensitive information is not present in JavaScript files to avoid Cross-Site Script Inclusion (XSSI) attacks. | | ✓ | ✓ | | [#903](https://github.com/OWASP/ASVS/issues/903) |
 
-## V50.4 Unintended Content Interpretation
+## V50.5 Unintended Content Interpretation
 
 | # | Description | L1 | L2 | L3 | CWE | Issue |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -60,13 +60,13 @@ note: tags and numbers for requirements are not changed, at the moment the goal 
 | **1.12.2** | [MODIFIED] Verify that user-uploaded files - if required to be displayed or downloaded from the application - are served by either octet stream downloads, or from an unrelated domain, such as a cloud file storage bucket. | | ✓ | ✓ | 646 | [#1406](https://github.com/OWASP/ASVS/issues/1406) |
 | **50.4.2** | [PROPOSED] Verify that if a client navigates to a resource (template, API response) which are not meant to be accessed directly, the application have defense (not serving the response, serving as an attachment or sandboxed content) to avoid rendering the response in browser or showing content and functionality out of context. | | ✓ | ✓ | | [#1009](https://github.com/OWASP/ASVS/issues/1009) |
 
-## V50.5 External Resource Integrity
+## V50.6 External Resource Integrity
 
 | # | Description | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **14.2.3** | [MODIFIED] Verify that if client-side assets, such as JavaScript libraries, CSS or web fonts, are hosted externally on a Content Delivery Network (CDN) or external provider, Subresource Integrity (SRI) is used to validate the integrity of the asset. | ✓ | ✓ | ✓ | 829 |
 
-## V50.6 Other Browser Security Considerations
+## V50.7 Other Browser Security Considerations
 
 | # | Description | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---: | :---: | :---: |
