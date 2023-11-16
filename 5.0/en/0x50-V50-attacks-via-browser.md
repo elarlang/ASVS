@@ -2,8 +2,7 @@
 
 note: all category names, section names and file name will be most likely renamed in the future.
 
-The category focuses on requirements which protect against attacks via that are excecuted via a victim browser. These requirements will not be relevant for machine-to-machine solutions.
-
+The category focuses on requirements which protect against attacks via that are executed via a victim browser. These requirements will not be relevant for machine-to-machine solutions.
 
 ## V50.1 Browser Origin Separation
 
