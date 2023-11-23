@@ -24,6 +24,7 @@ The category focuses on requirements which protect against attacks that are exec
 ## V50.3 Browser Origin Separation
 
 Other possible titles:
+
 * confused deputy
 * request origin
 * cors setup
@@ -33,8 +34,9 @@ When accepting request on the server side, we need to be sure it is initiated by
 The keywords here are browser security policies like Same Origin Policy for JavaScript and also SameSite logic for cookies.
 
 The category should contain requirements with idea:
-  * Verify that request was initiated by trusted party (CSRF, CORS misconfiguration)
-  * Verify that the response is readable only for trusted parties (CORS misconfiguration)
+
+* Verify that request was initiated by trusted party (CSRF, CORS misconfiguration)
+* Verify that the response is readable only for trusted parties (CORS misconfiguration)
 
 note: tags and numbers for requirements are not changed, at the moment the goal is to verify the idea and concept of the category
 
