@@ -1,16 +1,16 @@
-# V50 Browser-based Attacks
+# V50 Web Frontend Security
 
 note: all category names, section names and file name will be most likely renamed in the future.
 
-The category focuses on requirements which protect against attacks via that are executed via a victim browser. These requirements will not be relevant for machine-to-machine solutions.
+The category focuses on requirements which protect against attacks that are executed via a web frontend for an application. These requirements will not be relevant for machine-to-machine solutions.
 
 ## V50.1 Site Isolation Architecture
 
 | # | Description | L1 | L2 | L3 | CWE | Issue |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
-| **50.1.1** | REMOVE SECTION. | | | | | |
+| **50.1.1** | [ADDED] Verify that separate applications are hosted on different hostnames so as to benefit from the protections provided by the "same origin policy" and the hostname restrictions on cookies. | ✓ | ✓ | ✓ | 668 | [#1299](https://github.com/OWASP/ASVS/issues/1299) |
 
-## V50.2 Browser Security Configuration Headers
+## V50.2 Browser Security Mechanism Headers
 
 | # | Description | L1 | L2 | L3 | CWE |
 | :---: | :--- | :---: | :---: | :---: | :---: |
@@ -19,6 +19,7 @@ The category focuses on requirements which protect against attacks via that are 
 | **14.4.5** | [MODIFIED] Verify that a Strict-Transport-Security header is included on all responses and for all subdomains, such as Strict-Transport-Security: max-age=31536000; includeSubdomains. | ✓ | ✓ | ✓ | 523 |
 | **14.4.6** | Verify that a suitable Referrer-Policy header is included to avoid exposing sensitive information in the URL through the Referer header to untrusted parties. | ✓ | ✓ | ✓ | 116 |
 | **14.4.7** | Verify that the content of a web application cannot be embedded in a third-party site by default and that embedding of the exact resources is only allowed where necessary by using suitable Content-Security-Policy: frame-ancestors and X-Frame-Options response headers. | ✓ | ✓ | ✓ | 1021 |
+| **14.4.8** | [ADDED, SPLIT FROM 14.5.3] Verify that the Cross-Origin Resource Sharing (CORS) Access-Control-Allow-Origin header uses a strict allow list of trusted origins. When "Access-Control-Allow-Origin: *" needs to be used, verify that the responses do not include any sensitive information. | ✓ | ✓ | ✓ | 183 |
 
 ## V50.3 Browser Origin Separation
 
@@ -39,8 +40,6 @@ note: tags and numbers for requirements are not changed, at the moment the goal 
 
 | # | Description | L1 | L2 | L3 | CWE | Issue |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
-| **50.1.1** | [ADDED] Verify that separate applications are hosted on different hostnames so as to benefit from the protections provided by the "same origin policy" and the hostname restrictions on cookies. | ✓ | ✓ | ✓ | 668 | [#1299](https://github.com/OWASP/ASVS/issues/1299) |
-| **14.4.8** | [ADDED, SPLIT FROM 14.5.3] Verify that the Cross-Origin Resource Sharing (CORS) Access-Control-Allow-Origin header uses a strict allow list of trusted origins. When "Access-Control-Allow-Origin: *" needs to be used, verify that the responses do not include any sensitive information. | ✓ | ✓ | ✓ | 183 |
 | **4.2.2** | [MODIFIED, MERGED FROM 13.2.3] Verify that the application defends against Cross-Site Request Forgery (CSRF) attacks to protect authenticated or sensitive public functionality using the development framework's built-in anti-CSRF functionality or CSRF tokens plus additional defense in depth measures. | ✓ | ✓ | ✓ | 352 | [#1652](https://github.com/OWASP/ASVS/issues/1652) |
 | **4.2.3** | [ADDED] Verify that messages received by the postMessage interface are discarded if the origin of the message is not trusted, or if the syntax of the message is invalid. | | ✓ | ✓ | 346 | [#1230](https://github.com/OWASP/ASVS/issues/1230) |
 | **14.5.3** | [MODIFIED, SPLIT TO 14.4.8] Verify that the Origin header is validated against a defined list of allowed origins to match the desired Cross-Origin Resource Sharing (CORS) policy. | ✓ | ✓ | ✓ | 346 | [#1230](https://github.com/OWASP/ASVS/issues/1230) |
